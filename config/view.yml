@@ -1,0 +1,11 @@
+default:
+
+  stylesheets:
+    - dmBootstrapPlugin.bootstrap
+    - dmBootstrapPlugin.responsive
+
+  javascripts:
+    - dmBootstrapPlugin.bootstrap
+
+  has_layout:     true
+  layout:         bootstrap

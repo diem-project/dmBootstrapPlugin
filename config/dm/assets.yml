@@ -1,0 +1,7 @@
+js:
+  dmBootstrapPlugin:
+    bootstrap: bootstrap.min
+css:
+  dmBootstrapPlugin:
+    bootstrap: bootstrap.min
+    responsive: bootstrap-responsive.min

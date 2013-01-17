@@ -1,0 +1,10 @@
+parameters:
+
+  menu.class:    dmBootstrapMenu # change class for all menus
+  menu.options:
+    translate:   false        # disable translation for all menus
+    show_id:     true         # enable HTML id for all menus
+    layout:      false        # enable HTML id for all menus
+
+  link_tag_page.options:
+    current_class: active
