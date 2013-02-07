@@ -30,7 +30,23 @@ class sfWidgetFormSchemaFormatterBootstrap extends sfWidgetFormSchemaFormatter
       return '';
     }
 
-    $attributes = array_merge($attributes, array('class' => 'control-label'));
+    $attributes['class'] = dmArray::toHtmlCssClasses(
+      empty($attributes['class'])
+      ? array()
+      : array_merge((array) $attributes['class'], array())
+    );
+
+    if (is_string($attributes['class'])) {
+      $attributes['class'] = trim(str_replace('  ', ' ', str_replace('label', '', $attributes['class'])));
+    } elseif(is_array($attributes['class'])) {
+      if ($labelPos = array_search('label', $attributes['class'])) {
+        unset($attributes['class'][$labelPos]);
+      }
+    }
+
+//    $attributes['class'] = array_unique($attributes['class']);
+
+//    $attributes = array_merge($attributes, array('class' => 'control-label'));
 
     if (!isset($attributes['for']))
     {
